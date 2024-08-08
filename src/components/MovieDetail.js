@@ -7,25 +7,25 @@ const MovieDetail = ({ isAuthenticated }) => {
   const { movieItem, isSearchResult } = state || {};
   const navigate = useNavigate();
 
+  console.log('Movie Item:', movieItem); // Add this line
+
   if (!movieItem) {
     return <div>Movie not found</div>;
   }
 
   const handleRent = () => {
     if (isAuthenticated) {
-      alert('It will be added to your list after processiong payment ! Thank You Successfully added to your list');
-      // Add logic to add the movie to the user's rented list
+      alert('It will be added to your list after processing payment! Thank you.');
     } else {
-      alert('Please log in to rent this movie');
+      alert('Please log in to rent this movie.');
     }
   };
 
   const handleBuy = () => {
     if (isAuthenticated) {
-      alert('It will be added to your list after processiong payment ! Thank You ');
-      // Add logic to add the movie to the user's purchased list
+      alert('It will be added to your list after processing payment! Thank you.');
     } else {
-      alert('Please log in to buy this movie');
+      alert('Please log in to buy this movie.');
     }
   };
 

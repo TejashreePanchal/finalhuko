@@ -7,7 +7,10 @@ const MovieDetail = ({ isAuthenticated }) => {
   const { movieItem, isSearchResult } = state || {};
   const navigate = useNavigate();
 
-  console.log('Movie Item:', movieItem); // Add this line
+  console.log('Movie Item:', movieItem);
+  if (movieItem) {
+    console.log('Movie Image URL:', movieItem.image); // Add this line
+  }
 
   if (!movieItem) {
     return <div>Movie not found</div>;

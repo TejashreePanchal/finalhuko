@@ -6,6 +6,7 @@ const FeaturedSeries = ({ series, showAll }) => {
   const navigate = useNavigate();
 
   const handleSeriesClick = (serie) => {
+    console.log('Navigating to series detail with state:', serie); // Add this line
     navigate(`/series/${serie.id}`, { state: { seriesItem: serie } });
   };
 

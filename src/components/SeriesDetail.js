@@ -1,11 +1,16 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../css/MovieDetail.css'; // Reuse the same CSS for consistency
+import '../css/MovieDetail.css';
 
 const SeriesDetail = ({ isAuthenticated }) => {
   const { state } = useLocation();
   const { seriesItem, isSearchResult } = state || {};
   const navigate = useNavigate();
+
+  console.log('Series Item:', seriesItem);
+  if (seriesItem) {
+    console.log('Series Image URL:', seriesItem.image); // Add this line
+  }
 
   if (!seriesItem) {
     return <div>Series not found</div>;
@@ -14,7 +19,6 @@ const SeriesDetail = ({ isAuthenticated }) => {
   const handleRent = () => {
     if (isAuthenticated) {
       alert('It will be added to your list after processing payment! Thank you.');
-      // Add logic to add the series to the user's rented list
     } else {
       alert('Please log in to rent this series.');
     }
@@ -23,7 +27,6 @@ const SeriesDetail = ({ isAuthenticated }) => {
   const handleBuy = () => {
     if (isAuthenticated) {
       alert('It will be added to your list after processing payment! Thank you.');
-      // Add logic to add the series to the user's purchased list
     } else {
       alert('Please log in to buy this series.');
     }

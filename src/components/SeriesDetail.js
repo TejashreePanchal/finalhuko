@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../css/MovieDetail.css'; // Reuse the same CSS for consistency
+import '../css/MovieDetail.css';
 
 const SeriesDetail = ({ isAuthenticated }) => {
   const { state } = useLocation();
@@ -13,19 +13,19 @@ const SeriesDetail = ({ isAuthenticated }) => {
 
   const handleRent = () => {
     if (isAuthenticated) {
-      alert('It will be added to your list after processing payment! Thank you.');
+      alert('It will be added to your list after processiong payment ! Thank You ');
       // Add logic to add the series to the user's rented list
     } else {
-      alert('Please log in to rent this series.');
+      alert('Please log in to rent this series');
     }
   };
 
   const handleBuy = () => {
     if (isAuthenticated) {
-      alert('It will be added to your list after processing payment! Thank you.');
+      alert('It will be added to your list after processiong payment ! Thank You ');
       // Add logic to add the series to the user's purchased list
     } else {
-      alert('Please log in to buy this series.');
+      alert('Please log in to buy this series');
     }
   };
 

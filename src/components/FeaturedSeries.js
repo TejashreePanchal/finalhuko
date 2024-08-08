@@ -6,7 +6,7 @@ const FeaturedSeries = ({ series, showAll }) => {
   const navigate = useNavigate();
 
   const handleSeriesClick = (serie) => {
-    navigate(`/series/${serie.id}`, { state: { seriesItem: serie } });
+    navigate('/series/${serie.id}', { state: { seriesItem: serie } });
   };
 
   const seriesToShow = showAll ? series : series.slice(0, 7);

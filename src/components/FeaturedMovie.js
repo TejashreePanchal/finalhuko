@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import '../css/FeaturedMovie.css';
 
 const FeaturedMovie = ({ movies, showAll }) => {
-  const navigate = useNavigate(); //used to nevigate through
+  const navigate = useNavigate(); //used to nevigate through pages
 
   const handleMovieClick = (movie) => {
-    navigate(`/movie/${movie.id}`, { state: { movieItem: movie } });
+    navigate('/movie/${movie.id}', { state: { movieItem: movie } });
   };
 
   const moviesToShow = showAll ? movies : movies.slice(0, 7);

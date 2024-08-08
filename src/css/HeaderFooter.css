@@ -31,9 +31,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 40px; /* Increase padding for a taller header */
   background-color: #1F1F1F;
   color: white;
+  height: 100px; /* Set a fixed height */
 }
 
 .header .logo {
@@ -73,6 +74,36 @@ img {
   color: white;
   text-decoration: none;
   font-size: 20px;
+}
+
+/* Search Box Styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px; /* Adjust the width as needed */
+}
+
+.search-container button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #0e9688c3;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-container button:hover {
+  background-color: #009687a8;
 }
 
 /* Main Content Styles */
@@ -127,4 +158,19 @@ img {
 .footer .links .row {
   display: flex;
   gap: 20px; /* Added to space between links */
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
 }

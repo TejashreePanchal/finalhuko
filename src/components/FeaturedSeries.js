@@ -1,5 +1,3 @@
-// src/components/FeaturedSeries.js
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/FeaturedMovie.css'; // Reuse the same CSS for consistency

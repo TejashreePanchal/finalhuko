@@ -1,5 +1,3 @@
-// src/components/Home.js
-
 import React from 'react';
 import HeroSection from './HeroSection';
 import FeaturedMovie from './FeaturedMovie';
